@@ -21,25 +21,30 @@ function isValidCreditCard(numberCard);
 function justNumbers();
 function isValidCreditCard();
 
-## FUNCTION EXPRESSIONS: _El objeto función es creado cuando la declación se está ejecutando._
+## FUNCTION EXPRESSIONS: 
+* **El objeto función es creado cuando la declación se está ejecutando.**
 
 var creditCardNumber = justNumbers(length(numberCard));
 
-## FUNCTION STATEMENTS: _El objeto función es creado antes de que la declaración es ejecutada y después de que la declaración es invocada, es decir, pueden ser invocadas en cualquier parte del documento. No se recomienda su uso por lo mismo._
+## FUNCTION STATEMENTS: 
+* **El objeto función es creado antes de que la declaración es ejecutada y después de que la declaración es invocada, es decir, pueden ser invocadas en cualquier parte del documento. No se recomienda su uso por lo mismo.**
 function activeButton();
 function desactiveButton();
 function length();
 function justNumbers();
 function isValidCreditCard();
 
-## IIFE’s/ Immediately Invoked Function Expressions: _O funciones autoinvocables son funciones Expressions que no son puestas inmediatamente en memoria, sino que son puestas una vez que se corran._
+## IIFE’s/ Immediately Invoked Function Expressions: 
+* **O funciones autoinvocables son funciones Expressions que no son puestas inmediatamente en memoria, sino que son puestas una vez que se corran.**
 No usadas.
 
-## CLOSURE: _Todo tipo de variable que se declare dentro de un ambito de la función externa y es utilizada por la función anidada pertenecerá al closure.Es decir que una función definida dentro del closure “recuerda” el entorno en el que se ha creado y tiene acceso a las variables de ese entorno (scope)._
+## CLOSURE: 
+* **Todo tipo de variable que se declare dentro de un ambito de la función externa y es utilizada por la función anidada pertenecerá al closure.Es decir que una función definida dentro del closure “recuerda” el entorno en el que se ha creado y tiene acceso a las variables de ese entorno (scope).**
 function isValidCreditCard(numberCard); 
 function justNumbers(input);
 
-## STACK EJECUTION: _Contexto de ejecución apilados. El que permanece arriba de la pila es la función que se está ejecutando actualmente. Un nuevo contexto de ejecución es creado y puesto arriba de la pila cuando una función es invocada, y retirada de la fila cuando la función finaliza._
+## STACK EJECUTION: 
+* **Contexto de ejecución apilados. El que permanece arriba de la pila es la función que se está ejecutando actualmente. Un nuevo contexto de ejecución es creado y puesto arriba de la pila cuando una función es invocada, y retirada de la fila cuando la función finaliza.**
 isValidCreditCard();
 activeButton()
 function desactiveButton()
@@ -47,5 +52,6 @@ function length(input)
 function justNumbers(input)
 function isValidCreditCard(numberCard) 
 
-## EVENT QUEUE: _Cada vez que se llama a un evento o se hace una operación asincrónica, es añadida a la **tabla de eventos(event table)**. Cuando la pila tiene suficiente capacidad, un mensaje es tomado del queue (cola) y  se procesa, el cual consiste en llamar a la función asociada. Este mensaje termina de procesarse cuando **la pila se vuelve vacia de nuevo**. Ejemplo: Si un usuario da click a un botón y no se proporciona nunfuna función callback, entonces ningun mensaje estaria en cola._
+## EVENT QUEUE: 
+* **Cada vez que se llama a un evento o se hace una operación asincrónica, es añadida a la *tabla de eventos(event table)*. Cuando la pila tiene suficiente capacidad, un mensaje es tomado del queue (cola) y  se procesa, el cual consiste en llamar a la función asociada. Este mensaje termina de procesarse cuando *la pila se vuelve vacia de nuevo*. Ejemplo: Si un usuario da click a un botón y no se proporciona nunfuna función callback, entonces ningun mensaje estaria en cola.**
 $inputCard.on('input', function(){})
