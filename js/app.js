@@ -25,15 +25,15 @@ $(document).ready(function() {
     $buttonNext.attr('disabled', true);
   } 
 
-  // Funcion que valida la longitud del input ingresado por el usuario
-  function longitud(input) {
+  // Funcion que valida la length del input ingresado por el usuario
+  function length(input) {
     if (input.trim().length === 16) {
       return input;
     }
   }
   
-  // Funcion que valida la longitud del input ingresado por el usuario
-  function soloNumeros(input) {
+  // Funcion que valida la length del input ingresado por el usuario
+  function justNumbers(input) {
     var regex = /^[0-9]+$/;
     if (regex.test(input)) {
       return input;
@@ -42,10 +42,10 @@ $(document).ready(function() {
  
   // Funcion que valida que sea una un numero de tarjeta valido   
   function isValidCreditCard(numberCard) {
-    var creditCardNumber = soloNumeros(longitud(numberCard));
+    var creditCardNumber = justNumbers(length(numberCard));
     if (creditCardNumber !== undefined) {
       var arr = [];
-      var sumaTotal = 0;
+      var totalSum = 0;
       for (var index = creditCardNumber.length - 1; index >= 0; index--) {
         arr.push(creditCardNumber[index]);
       }
@@ -57,10 +57,10 @@ $(document).ready(function() {
       }
      
       for (var index = 0; index < arr.length; index++) {
-        sumaTotal = sumaTotal + parseInt(arr[index]);
+        totalSum = totalSum + parseInt(arr[index]);
       }
      
-      if (sumaTotal % 10 === 0) {
+      if (totalSum % 10 === 0) {
         console.log('Es una tarjeta valida');
         activeButton();
       } else {
